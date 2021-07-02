@@ -1,5 +1,7 @@
 package com.pro.service;
 
+import java.util.List;
+
 public class PromotionServiceImpl {
 
 	Logger logger = LoggerFactory.getLogger(PromotionServiceImpl.class);
@@ -15,11 +17,11 @@ public class PromotionServiceImpl {
 
         try
         {
-            foreach (ProductCheckout item in checkoutList)
+            for (ProductCheckout item : checkoutList)
             {
                 if (item.Quantity > 0)
                 {
-                    foreach (var strategy in strategies)
+                    for(String strategy : strategies)
                     {
                         if (strategy.CanExecute(item, promotions))
                         {

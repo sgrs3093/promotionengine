@@ -31,7 +31,7 @@ public class PromotionEngineFacade {
         }
         catch (Exception ex)
         {
-            LogWriter.LogWrite("Error in Checking out Products :" + ex.Message);
+        	logger.log("Error in Checking out Products :" + ex.Message);
         }
         return false;
     }
@@ -45,7 +45,7 @@ public class PromotionEngineFacade {
         }
         catch (Exception ex)
         {
-            LogWriter.LogWrite("Error in  Applying Promotio :" + ex.Message);
+        	logger.log("Error in  Applying Promotio :" + ex.Message);
         }
         return false;
     }
@@ -76,7 +76,7 @@ public class PromotionEngineFacade {
         }
         catch (Exception ex)
         {
-            LogWriter.LogWrite("Error in Getting Product Offers :" + ex.Message);
+        	logger.log("Error in Getting Product Offers :" + ex.Message);
         }
         return new List<Promotion>();
     }
@@ -90,7 +90,7 @@ public class PromotionEngineFacade {
         }
         catch (Exception ex)
         {
-            LogWriter.LogWrite("Error in Getting AvilableProducts :" + ex.Message);
+        	logger.log("Error in Getting AvilableProducts :" + ex.Message);
 
         }
         return new List<Product>();
